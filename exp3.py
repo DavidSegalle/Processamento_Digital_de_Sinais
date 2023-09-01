@@ -17,7 +17,7 @@ x = np.load("123test.npy")
 
 fs = 8192
 alpha = 0.7
-tau = 0.005
+tau = 0.5
 
 d = round(tau * fs)
 
