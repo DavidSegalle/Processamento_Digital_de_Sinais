@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.signal import lfilter
+from scipy.signal import lfilter, freqz
 
 def mse(x,y):
     return np.mean(np.abs(x-y)**2)
