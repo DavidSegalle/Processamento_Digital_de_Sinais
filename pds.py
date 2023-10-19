@@ -21,3 +21,8 @@ def eqdif(b, a, x):
             if n - k >= 0:
                 y[n] += b[k] * x[n-k]
     return y
+
+def dftxmtx(N):
+    n = np.arange(N).reshape(N, 1) # Transforma em uma matriz de 1 coluna
+    
+    return np.exp(-1j*2*np.pi/N)**(n@n.T)
