@@ -63,6 +63,6 @@ def multifaixa(A, w, M):
     for k in range(k - 1):
         h += (A[k] - A[k + 1]) * sinc2(m - M / 2, w[k])
 
-    h += A(-1) * sinc2(m - M / w, w[-1])
+    h += A[-1] * sinc2(m - M / 2, w[-1])
 
     return h
