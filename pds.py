@@ -55,3 +55,14 @@ def fft(x):
         return X
     else:
         return x
+
+def multifaixa(A, w, M):
+    h = np.zeros(M + 1)
+    m = np.arange(M + 1)
+    k = len(A)
+    for k in range(k - 1):
+        h += (A[k] - A[k + 1]) * sinc2(m - M / 2, w[k])
+
+    h += A(-1) * sinc2(m - M / w, w[-1])
+
+    return h
